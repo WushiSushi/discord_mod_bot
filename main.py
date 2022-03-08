@@ -20,10 +20,6 @@ async def on_ready():
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         pass
-
-    elif isinstance(error, commands.CommandOnCooldown):
-        await ctx.reply(f"You can try again in {error.retry_after:.2f}s.", delete_after=5)
-        await ctx.message.delete()    
         
         
 #ban
